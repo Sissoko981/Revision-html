@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.png">
+  <title>To-Do List Étudiante - UVS IDA</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #002b5c;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      border-bottom: 5px solid #fbc531;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 20px 30px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #002b5c;
+      border-left: 5px solid #fbc531;
+      padding-left: 10px;
+      font-size: 1.3em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f1f2f6;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      background: #dcdde1;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 12px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    label {
+      cursor: pointer;
+      flex: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #002b5c;
+      color: white;
+      font-size: 0.9em;
+      border-top: 5px solid #fbc531;
+    }
+
+    .objectif-box {
+      background: #fef9e7;
+      border-left: 5px solid #fbc531;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .objectif-box h2 {
+      border: none;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .objectif-box li {
+      background: #fffbe6;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>To-Do List - 1ʳᵉ Année IDA (Semestre 2)</h1>
+    <p>Organisation des cours, devoirs et révisions - UVS</p>
+  </header>
+
+  <main>
+    <!-- 🎯 Objectifs du Semestre -->
+    <section class="objectif-box">
+      <h2>🎯 Objectifs du Semestre 2</h2>
+      <ul>
+        <li><input type="checkbox" id="o1"><label for="o1">Maintenir ou améliorer ma moyenne générale</label></li>
+        <li><input type="checkbox" id="o2"><label for="o2">Rendre tous mes devoirs avant la date limite</label></li>
+        <li><input type="checkbox" id="o3"><label for="o3">Faire un résumé de chaque cours chaque semaine</label></li>
+        <li><input type="checkbox" id="o4"><label for="o4">Participer activement aux forums et séances interactives</label></li>
+        <li><input type="checkbox" id="o5"><label for="o5">Préparer les examens 2 semaines à l'avance</label></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📆 Mois 1 : Mise en route</h2>
+      <ul>
+        <li><input type="checkbox" id="c1"><label for="c1">Télécharger les supports de cours sur l'ENT</label></li>
+        <li><input type="checkbox" id="c2"><label for="c2">Créer un dossier par matière (Algorithmique, Web, etc.)</label></li>
+        <li><input type="checkbox" id="c3"><label for="c3">Lire le plan du cours et noter les objectifs</label></li>
+        <li><input type="checkbox" id="c4"><label for="c4">Faire un résumé après chaque séance UVS</label></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧮 Suivi des cours</h2>
+      <ul>
+        <li><input type="checkbox" id="c5"><label for="c5">Algorithmique et programmation - 2h de révision par semaine</label></li>
+        <li><input type="checkbox" id="c6"><label for="c6">Développement Web (HTML, CSS, JS)</label></li>
+        <li><input type="checkbox" id="c7"><label for="c7">Système d'exploitation</label></li>
+        <li><input type="checkbox" id="c8"><label for="c8">Bureautique avancée</label></li>
+        <li><input type="checkbox" id="c9"><label for="c9">Mathématiques appliquées</label></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📝 Devoirs et Travaux Pratiques</h2>
+      <ul>
+        <li><input type="checkbox" id="c10"><label for="c10">Vérifier les dates limites sur l'ENT</label></li>
+        <li><input type="checkbox" id="c11"><label for="c11">Soumettre chaque devoir avant la date</label></li>
+        <li><input type="checkbox" id="c12"><label for="c12">Corriger les anciens devoirs avec les retours du tuteur</label></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📖 Révisions avant évaluations</h2>
+      <ul>
+        <li><input type="checkbox" id="c13"><label for="c13">Revoir tous les TD corrigés</label></li>
+        <li><input type="checkbox" id="c14"><label for="c14">Faire une fiche de synthèse par matière</label></li>
+        <li><input type="checkbox" id="c15"><label for="c15">S'entraîner avec les anciens examens</label></li>
+        <li><input type="checkbox" id="c16"><label for="c16">Faire une simulation d'examen (temps limité)</label></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 - Université Virtuelle du Sénégal | Programme IDA - To-Do List Étudiante
+  </footer>
+
+</body>
+</html>
